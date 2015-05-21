@@ -11,6 +11,7 @@ var (
 	mode     string
 	source   = flag.String("source", "127.0.0.1:6379", "Redis server to pull data from")
 	dest     = flag.String("dest", "127.0.0.1:6379", "Redis server to send data to")
+	batch    = flag.Int("batch", 10, "Batch size")
 	scanners = flag.Int("scanners", 1, "Count of scanners to spin up")
 	workers  = flag.Int("workers", 2, "Count of workers to spin up")
 )
